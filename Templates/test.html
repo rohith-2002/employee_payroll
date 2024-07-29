@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Payroll Form</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="profile-image">Profile Image:</label>
+                <div class="profile-image">
+                    <input type="radio" id="image1" name="profile-image" value="image1">
+                    <label for="image1"></label>
+                    <input type="radio" id="image2" name="profile-image" value="image2">
+                    <label for="image2"></label>
+                    <input type="radio" id="image3" name="profile-image" value="image3">
+                    <label for="image3"></label>
+                    <input type="radio" id="image4" name="profile-image" value="image4">
+                    <label for="image4"></label>
+                    <input type="radio" id="image5" name="profile-image" value="image5">
+                    <label for="image5"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <select id="salary" name="salary">
+                    <option value="Select Salary">Select Salary</option>
+                    <option value="Salary 1">Salary 1</option>
+                    <option value="Salary 2">Salary 2</option>
+                    <option value="Salary 3">Salary 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <select id="day" name="day">
+                    <option value="Day">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select id="month" name="month">
+                    <option value="Month">Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="Year">Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" placeholder="Enter any additional notes"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="button">Cancel</button>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Payroll Form</title>
+</head>
+<body>
+<h1>Employee Payroll Form</h1>
+<form>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+ 
+        <label>Profile Image:</label><br>
+<input type="radio" id="avatar1" name="profile_image" value="avatar1">
+<label for="avatar1">Avatar 1</label>
+<input type="radio" id="avatar2" name="profile_image" value="avatar2">
+<label for="avatar2">Avatar 2</label>
+<input type="radio" id="avatar3" name="profile_image" value="avatar3">
+<label for="avatar3">Avatar 3</label>
+<input type="radio" id="avatar4" name="profile_image" value="avatar4">
+<label for="avatar4">Avatar 4</label>
+<input type="radio" id="avatar5" name="profile_image" value="avatar5">
+<label for="avatar5">Avatar 5</label><br><br>
+ 
+        <label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br><br>
+ 
+        <label>Department:</label><br>
+<input type="checkbox" id="hr" name="department" value="hr">
+<label for="hr">HR</label>
+<input type="checkbox" id="sales" name="department" value="sales">
+<label for="sales">Sales</label>
+<input type="checkbox" id="finance" name="department" value="finance">
+<label for="finance">Finance</label>
+<input type="checkbox" id="engineer" name="department" value="engineer">
+<label for="engineer">Engineer</label>
+<input type="checkbox" id="others" name="department" value="others">
+<label for="others">Others</label><br><br>
+ 
+        <label for="salary">Salary:</label>
+<select id="salary" name="salary">
+<option value="">Select Salary</option>
+<!-- Add salary options here -->
+</select><br><br>
+ 
+        <label for="start_date">Start Date:</label><br>
+<select id="day" name="day">
+<option value="">Day</option>
+<!-- Add day options here -->
+</select>
+<select id="month" name="month">
+<option value="">Month</option>
+<!-- Add month options here -->
+</select>
+<select id="year" name="year">
+<option value="">Year</option>
+<!-- Add year options here -->
+</select><br><br>
+ 
+        <label for="notes">Notes:</label><br>
+<textarea id="notes" name="notes"></textarea><br><br>
+ 
+        <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+has context menu

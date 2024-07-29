@@ -1,0 +1,13 @@
+.mycss{
+    color:red;
+    font-size: 53px;
+    text-decoration: underline;
+}
+
+th,td{
+    border: 1px solid black;
+}
+
+table{
+    width:100%
+}

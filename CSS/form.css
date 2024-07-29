@@ -1,0 +1,54 @@
+body{
+    background-color:#F7F7F7;
+}
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: white !important;
+}
+.form-widget{
+    top: 133px;
+    left: 397px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+    opacity: 1;
+    margin: 20px 200px 20px 200px;
+    padding: 20px 100px 20px 100px;
+}
+.single-line {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;    /* Hides any overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow text */
+}
+nav img{
+    margin-top: 4px;
+    margin-right:3px;
+}
+.logo-p p{
+    margin-bottom:0;
+}
+.btn-secondary{
+    width:150px;
+    background-color: #E2E2E2 !important;
+    color: #42515F !important;
+}
+.btn:hover {
+    
+    background-color: #707070;
+    border-color:#969696 ;
+}
+
+.btn-hvr:hover{
+    background-color: #82A70C !important;
+}
+
+
+/* hvr{
+    background-color: #E2E2E2 !important;
+} */
+.hvr:hover{
+    background-color: #969696 !important;
+    color: #FFFFFF !important;
+}
