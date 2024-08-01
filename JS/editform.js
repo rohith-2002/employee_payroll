@@ -1,9 +1,5 @@
 if(localStorage.getItem('editUser')!==null){
-    console.log("off");
     let user=JSON.parse(localStorage.getItem('editUser'));
-    console.log(user);
-    console.log(user.name);
-    console.log($('input[name="gridRadio"]:checked').val());
     $('#inputName').val(user.name);
     $(`input[name="profile-image"][value="${user.image}"]`).prop('checked', true);
     $(`input[name="gridRadio"][value="${user.gender}"]`).prop('checked', true);
@@ -18,6 +14,6 @@ if(localStorage.getItem('editUser')!==null){
     $('#inputNotes').val(user.notes);
      
 
-    console.log("on");
+    
    
 }
