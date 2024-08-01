@@ -23,20 +23,47 @@ $(document).ready(function () {
 
         console.log(newUser);   
 
-        $.ajax({
-            url: 'http://localhost:3000/Users',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(newUser),
-            success: function (res) {
-                console.log(res);
-                alert('Data saved successfully');
-                window.opener.location.reload();
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        });
+        if(localStorage.getItem('editUser')!==null){
+            const user=JSON.parse(localStorage.getItem('editUser'));
+            id=user.id;
+            $.ajax({
+                url: 'http://localhost:3000/Users/'+ id,
+                type: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(newUser),
+                success: function (res) {
+                    console.log(res);
+                    alert('Data updated successfully');
+                    window.opener.location.reload();
+                    window.location.replace("employedetails.html");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+            localStorage.removeItem('editUser');
+        }
+        
+        else{
+        
+            $.ajax({
+                url: 'http://localhost:3000/Users',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(newUser),
+                success: function (res) {
+                    console.log(res);
+                    alert('Data saved successfully');
+                    window.opener.location.reload();
+                    window.location.replace("employedetails.html");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+
+      
     });
 
     function fetchdetails(){
@@ -56,6 +83,8 @@ $(document).ready(function () {
     function displayUsers(users) {
         const userTableBody = $('#table-body');
         userTableBody.empty();
+
+        
         users.forEach(user => {
             const userRow= `
             <tr>
@@ -76,8 +105,8 @@ $(document).ready(function () {
                     <td>${user.startDate}</td>
                     <td>
                         <div class="action">
-                            <button class="icon-btn" id="edit-btn"><img src="../Assets/icons/create-black-18dp.svg"></button>
-                            <button class="icon-btn"  id="btn_delete" ><img src="../Assets/icons/delete-black-18dp.svg"></button>
+                            <button class="icon-btn" id="edit-btn"  onclick="editemploy('${user.id}')"><img src="../Assets/icons/create-black-18dp.svg"></button>
+                            <button class="icon-btn"  id="btn_delete"   ><span  onclick="deletemploy('${user.id}')"><img src="../Assets/icons/delete-black-18dp.svg"></span></button>
                         </div>
                     </td>
                   </tr>
@@ -88,16 +117,17 @@ $(document).ready(function () {
     }
            
     fetchdetails(); 
-    console.log("at the delete functio")
-    $('#delete-btn').on('click',function(){
-        console.log($(this).closest('tr'));
-        $(this).closest('tr').remove();
-    })
+    
+    // $('#delete-btn').on('click',function(){
+    //     console.log($(this).closest('tr'));
+    //     $(this).closest('tr').remove();
+    // })
+   
 
     
     $(".searchbtn").click(function(){
-    $(this).replaceWith('<input type="text" id="searchInput" placeholder="Search users..."><button id="searchButt">Search</button>');
-    $('#searchButt').on('click', function() {
+    $(this).replaceWith('<input type="text" id="searchInput" placeholder="Search users..." style="margin-left:500px"><button id="searchButt">Search</button>');
+    $('#searchInput').on('keyup', function() {
         const searchTerm = $('#searchInput').val().toLowerCase();
         $.ajax({
             url: 'http://localhost:3000/Users',
@@ -112,5 +142,46 @@ $(document).ready(function () {
         });
     });
   });
+
+  
 });
+
+function deletemploy(id){
+    console.log("at the delete function")
+    $.ajax({
+        url: 'http://localhost:3000/Users/'+id,
+        type: 'DELETE',
+        success: function (res) {
+            console.log(res);
+            alert('Data deleted successfully');
+            window.opener.location.reload();
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+   };
+
+  
+function editemploy(id){
+    console.log("at edit functon");
+    $.ajax({
+        url:'http://localhost:3000/Users/'+id,
+        type:'GET',
+        success:function(res){
+            localStorage.setItem('editUser',JSON.stringify(res));
+            console.log(res);
+            window.location.replace("payrollform.html");
+             
+        },
+        error:function(err){
+            console.log(err);
+        }
+
+    })  
+   
+}
+
+
+
 

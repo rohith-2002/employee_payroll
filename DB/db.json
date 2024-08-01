@@ -27,17 +27,56 @@
       "startDate": "17/10/2006"
     },
     {
-      "id": "4b20",
+      "id": "73fb",
       "name": "hanuman",
-      "profile": "../Assets/images/Ellipse -7.png",
-      "gender": "Female",
+      "profile": "../Assets/images/Ellipse -8.png",
+      "gender": "Male",
       "department": [
         "HR",
         "Finance",
-        "Engineer"
+        "Other"
       ],
       "salary": "₹ 30,000",
       "startDate": "17/10/2006"
+    },
+    {
+      "id": "780f",
+      "name": "rohith",
+      "profile": "../Assets/images/Ellipse -5.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Sales",
+        "Finance"
+      ],
+      "salary": "₹ 30,000",
+      "startDate": "18/10/2010"
+    },
+    {
+      "id": "11d1",
+      "name": "rohith",
+      "profile": "../Assets/images/Ellipse -5.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Sales",
+        "Finance"
+      ],
+      "salary": "₹ 30,000",
+      "startDate": "18/10/2010"
+    },
+    {
+      "name": "rohith",
+      "profile": "../Assets/images/Ellipse -5.png",
+      "gender": "Female",
+      "department": [
+        "HR",
+        "Sales",
+        "Finance"
+      ],
+      "salary": "₹ 30,000",
+      "startDate": "18/10/2010",
+      "id": "aeb7"
     }
   ]
 }
