@@ -1,19 +1,6 @@
 {
   "Users": [
     {
-      "id": "63c4",
-      "name": "rohith",
-      "profile": "../Assets/images/Ellipse -7.png",
-      "gender": "Male",
-      "department": [
-        "HR",
-        "Finance",
-        "Engineer"
-      ],
-      "salary": "₹ 30,000",
-      "startDate": "18/10/2010"
-    },
-    {
       "id": "663d",
       "name": "rohith",
       "profile": "../Assets/images/Ellipse -7.png",
@@ -51,19 +38,6 @@
       ],
       "salary": "₹ 30,000",
       "startDate": "17/10/2006"
-    },
-    {
-      "id": "5fea",
-      "name": "ravi",
-      "profile": "../Assets/images/Ellipse -4.png",
-      "gender": "Female",
-      "department": [
-        "HR",
-        "Sales",
-        "Finance"
-      ],
-      "salary": "₹ 50,000",
-      "startDate": "14/9/2007"
     }
   ]
 }
